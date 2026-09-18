@@ -19,7 +19,7 @@ export function Footer() {
             <img
               src="/assets/logo-mark.png"
               alt={`${company.name} Logo`}
-              className="h-20 w-20 object-contain md:h-28 md:w-28"
+              className="h-28 w-28 object-contain md:h-40 md:w-40"
             />
             <div className="max-w-[14ch] font-display text-[30px] leading-[1.02] tracking-tight text-ink md:text-[44px]">
               {company.shortName || company.name}
