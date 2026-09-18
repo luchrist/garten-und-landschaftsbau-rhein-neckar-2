@@ -47,12 +47,13 @@ export function Navbar() {
           solid ? "bg-ink/10 opacity-100" : "opacity-0"
         }`}
       />
-      {/* Padding und Logo-Groesse schrumpfen sanft, wenn der Header solide wird —
-          transparent gibt dem Logo Raum, solid haelt die Header-Hoehe knapp am
-          Logo, damit keine leere Flaeche unter dem Logo mitscrollt. */}
+      {/* Logo und Nav-Links duerfen prominent bleiben — nur das Padding um sie
+          herum wird auf ein Minimum reduziert, damit der Header trotzdem nicht
+          hoeher wird als noetig. Beim Scroll schrumpft das Logo eine Stufe, die
+          Nav-Groesse bleibt konstant. */}
       <nav
         className={`mx-auto flex max-w-[1400px] items-center justify-between px-6 transition-all duration-500 md:px-10 ${
-          solid ? "py-1.5 md:py-2" : "py-2 md:py-3"
+          solid ? "py-1 md:py-1" : "py-1 md:py-2"
         }`}
       >
         <a href="/" className="flex items-center">
@@ -60,7 +61,7 @@ export function Navbar() {
             src="/assets/logo-mark.png"
             alt={`${company.name} Logo`}
             className={`object-contain transition-all duration-500 ${
-              solid ? "h-14 w-14 md:h-20 md:w-20" : "h-20 w-20 md:h-28 md:w-28"
+              solid ? "h-16 w-16 md:h-24 md:w-24" : "h-24 w-24 md:h-36 md:w-36"
             }`}
           />
         </a>
@@ -70,7 +71,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className={`group relative font-mono text-[11px] uppercase tracking-[0.22em] transition-colors duration-500 ${
+              className={`group relative font-mono text-[13px] uppercase tracking-[0.22em] transition-colors duration-500 ${
                 solid ? "text-ink/65 hover:text-ink" : "text-bone/75 hover:text-bone"
               }`}
             >
@@ -83,7 +84,7 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href="/projekt-anfragen"
-            className={`group relative hidden overflow-hidden rounded-full border px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.22em] transition-all duration-500 active:scale-[0.98] sm:inline-flex sm:items-center sm:gap-3 ${
+            className={`group relative hidden overflow-hidden rounded-full border px-6 py-3 font-mono text-[13px] uppercase tracking-[0.22em] transition-all duration-500 active:scale-[0.98] sm:inline-flex sm:items-center sm:gap-3 ${
               solid ? "border-ink text-ink" : "border-bone/50 text-bone"
             }`}
           >
